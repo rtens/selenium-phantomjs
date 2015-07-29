@@ -9,7 +9,7 @@ echo "Test started" . PHP_EOL;
 
 $driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', [WebDriverCapabilityType::BROWSER_NAME => 'phantomjs']);
 
-$driver->get('http://localhost:8000');
+$driver->get('http://localhost:8880');
 
 echo "------- RESULT --------" . PHP_EOL;
 var_dump($driver->getPageSource());
