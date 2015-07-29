@@ -6,9 +6,9 @@ php:
 before_script:
  - composer install
  - wget http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
- - java -jar selenium-server-standalone-2.46.0.jar &
+ - java -jar selenium-server-standalone-2.46.0.jar >/dev/null 2>&1 &
  - php -S 127.0.0.1:8000 index.php &
- - sleep 5
+ - sleep 3
 
 script:
  - php test.php
