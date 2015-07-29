@@ -12,4 +12,4 @@ $driver = RemoteWebDriver::create('http://localhost:4444/wd/hub', [WebDriverCapa
 
 $driver->get('http://localhost:8000');
 
-echo $driver->findElement(WebDriverBy::tagName('h1'))->getText();
+echo $driver->getPageSource();
