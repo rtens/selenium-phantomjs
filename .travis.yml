@@ -5,10 +5,12 @@ php:
 
 before_script:
  - composer install
- - php -S localhost:8000 index.php &
+ - php -S localhost:8000 &
  - wget http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
  - java -jar selenium-server-standalone-2.46.0.jar >/dev/null 2>&1 &
  - sleep 5
 
 script:
+ - pwd
+ - ls -la
  - php test.php

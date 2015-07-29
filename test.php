@@ -2,7 +2,6 @@
 
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\WebDriverCapabilityType;
-use Facebook\WebDriver\WebDriverBy;
 
 require_once 'vendor/autoload.php';
 
