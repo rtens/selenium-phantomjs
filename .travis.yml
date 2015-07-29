@@ -7,10 +7,9 @@ before_script:
  - composer install
  - wget http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
  - java -jar selenium-server-standalone-2.46.0.jar >/dev/null 2>&1 &
- - pwd
- - ls -la
- - php -S localhost:8880 &
- - sleep 10
+ - php -S localhost:8000 index.php &
+ - sleep 5
 
 script:
+ - wget http://localhost:8000/index.php
  - php test.php
